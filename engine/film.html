@@ -1,0 +1,9 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Film preview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=block" rel="stylesheet">
+<style>body{margin:0;background:#0b0c0a;color:#ddd;font:14px Geist,system-ui,sans-serif;display:flex;flex-direction:column;align-items:center;padding:16px}
+canvas{max-width:min(100%,1280px);max-height:78vh;border-radius:10px;background:#000;display:block}.bar{display:flex;gap:10px;align-items:center;width:min(100%,1280px);margin-top:10px}
+#scrub{flex:1;accent-color:#BFF549}button{all:unset;cursor:pointer;background:#BFF549;color:#000;font-weight:600;padding:6px 14px;border-radius:7px}.hint{color:#777;font-size:12px;margin-top:6px}</style></head>
+<body><canvas id="c"></canvas><div class="bar"><button id="play">Pause</button><input id="scrub" type="range" min="0" step="0.01"><span id="tm"></span></div>
+<div class="hint">Space = play/pause · ← → = one frame · G = show phone safe zones (vertical) · add ?v=1 for 9:16</div>
+<script src="kit.js"></script><script>/* load the brand once (brand.json), then the film */const name=(new URLSearchParams(location.search).get('f')||'example').replace(/[^a-z0-9_-]/gi,'');fetch('brand.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).catch(()=>({})).then(b=>{window.BRAND=b||{};const s=document.createElement('script');s.src='films/'+name+'.js';document.body.appendChild(s);});</script></body></html>

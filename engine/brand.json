@@ -1,0 +1,19 @@
+{
+  "example": true,
+  "name": "Nimbus",
+  "line": "Summarize any thread in one sentence",
+  "accent": "#BFF549",
+  "bg": "#0b0d0c",
+  "ink": "#ffffff",
+  "glow1": "#1f6f5a",
+  "glow2": "#3b3bd6",
+  "logo": "",
+  "cta": "Try it free",
+  "sub": "Mac and Windows",
+  "lead": "Built for",
+  "items": [
+    "Claude Code",
+    "Codex"
+  ],
+  "agent": "Claude Code"
+}

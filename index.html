@@ -1,0 +1,73 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Viral launch films</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5EF;--card:#fff;--line:#E3E6DE;--ink:#111;--sub:#6b7280;--lime:#BFF549;--limeInk:#3d5a00;--paid:#FF8A1F}
+:root[data-theme="dark"]{--bg:#0B0C0A;--card:#141614;--line:#262826;--ink:#f2f2f2;--sub:#9aa3ad;--limeInk:#BFF549}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Geist,system-ui,sans-serif}
+.w{max-width:1440px;margin:0 auto;padding:28px 16px 80px}
+header{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap;margin-bottom:18px}h1{font-size:34px;margin:0;letter-spacing:-.8px}.sub{color:var(--sub);margin:4px 0 0;font-size:15px}
+.tabs{margin-left:auto;display:flex;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:3px}.tabs button{all:unset;cursor:pointer;padding:7px 14px;border-radius:7px;font-size:14px;color:var(--sub)}.tabs button.on{background:var(--ink);color:var(--bg);font-weight:600}
+.th{all:unset;cursor:pointer;border:1px solid var(--line);border-radius:9px;padding:8px 11px;font-size:13px;background:var(--card)}
+.bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+select,input[type=search]{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:9px;padding:9px 12px;font:14px Geist,system-ui}input[type=search]{min-width:200px}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:9px;padding:3px;flex-wrap:wrap}.seg button{all:unset;cursor:pointer;font-size:13px;padding:6px 11px;border-radius:7px;color:var(--sub)}.seg button.on{background:var(--lime);color:#111;font-weight:600}
+.count{color:var(--sub);font-size:13px;margin-left:auto}
+.g{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px 18px;align-items:start}
+.t{cursor:pointer}.vid{position:relative;border-radius:14px;overflow:hidden;background:#111;border:1px solid var(--line)}
+.vid video,.vid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.vid video{opacity:0;transition:opacity .2s}.t:hover .vid video{opacity:1}
+.pill{position:absolute;left:10px;top:10px;font-size:11.5px;font-weight:600;border-radius:999px;padding:4px 9px;background:rgba(255,255,255,.94);color:#111}.pill.b{background:var(--paid)}.pill.m{background:#ffd27a}
+.scrim{position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(transparent,rgba(0,0,0,.78));pointer-events:none}.views{position:absolute;left:12px;bottom:9px;color:#fff;line-height:1;text-shadow:0 2px 12px rgba(0,0,0,.4)}.views b{font-size:36px;font-weight:800;letter-spacing:-1.2px}.views span{font-size:13px;font-weight:600;opacity:.85;margin-left:5px}.fmt{position:absolute;right:10px;top:10px;font-size:11.5px;font-weight:700;border-radius:999px;padding:4px 9px;background:rgba(0,0,0,.6);color:#fff}
+.meta{padding:10px 2px 0}.meta b{font-size:15px}.meta div{color:var(--sub);font-size:13px;margin-top:2px}
+.dlg{position:fixed;inset:0;background:rgba(0,0,0,.45);display:none;align-items:center;justify-content:center;padding:16px;z-index:5}.dlg.on{display:flex}
+.box{background:var(--card);border-radius:18px;max-width:980px;width:100%;max-height:92vh;overflow:auto;display:grid;grid-template-columns:1fr 1fr}
+.box video{width:100%;height:100%;max-height:92vh;object-fit:contain;background:#000;border-radius:18px 0 0 18px}.info{padding:22px;display:flex;flex-direction:column;gap:12px}
+.info h2{margin:0;font-size:24px}.info .h{color:var(--sub)}.kv{display:flex;gap:8px;flex-wrap:wrap}.kv span{font-size:12.5px;border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.info p{margin:0;line-height:1.5;font-size:14.5px}.info p b{display:block;font-size:12px;color:var(--sub);text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.act{display:flex;gap:8px;margin-top:auto;flex-wrap:wrap}.act a,.act button{all:unset;cursor:pointer;font-weight:600;font-size:14px;border-radius:10px;padding:10px 14px}.act a{border:1px solid var(--line)}.act button{background:var(--lime);color:#111}
+.steps{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}.step b{color:var(--limeInk);font-size:13px}.step h3{margin:6px 0;font-size:17px}.step p{margin:0;color:var(--sub);font-size:14px;line-height:1.5}
+pre{white-space:pre-wrap;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;font:13.5px/1.5 ui-monospace,Menlo,monospace;margin:0 0 10px}.pt{display:flex;justify-content:space-between;align-items:center;margin:18px 0 8px}.pt h3{margin:0}.pt button{all:unset;cursor:pointer;background:var(--lime);color:#111;font-weight:600;font-size:13px;border-radius:8px;padding:6px 12px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:9px;font-weight:600;opacity:0;transition:.2s;z-index:9}.toast.on{opacity:1}
+[hidden]{display:none!important}
+@media(max-width:760px){.box{grid-template-columns:1fr}.box video{border-radius:18px 18px 0 0;max-height:60vh}.tabs{margin-left:0}.count{margin-left:0}}
+</style></head><body><div class="w">
+<header><div><h1>Viral launch films</h1><p class="sub">68 launch videos that blew up on X. Hover to play. Click one to see why it worked and copy the remix prompt.</p></div>
+<div class="tabs"><button class="on" data-t="lib">Library</button><button data-t="how">How it works</button><button data-t="pr">Prompts</button></div><button class="th" id="th">Dark</button></header>
+<section id="lib"><div class="bar"><input type="search" id="q" placeholder="Search"><select id="cat"></select>
+<div class="seg" id="boost"><button class="on" data-b="all">All</button><button data-b="Organic">Organic</button><button data-b="Partly boosted">Partly boosted</button><button data-b="Boosted">Boosted</button></div>
+<div class="seg" id="fmt"><button class="on" data-f="all">All shapes</button><button data-f="Landscape">16:9</button><button data-f="Vertical">9:16</button><button data-f="Square">1:1</button></div><select id="sort"><option value="views">Most views</option><option value="new">Newest</option><option value="short">Shortest</option></select><span class="count" id="count"></span></div>
+<div class="g" id="grid"></div></section>
+<section id="how" hidden><div class="steps" id="steps"></div><h3 style="margin:26px 0 10px">What the engine makes (example film)</h3><div style="display:grid;grid-template-columns:2fr 1fr;gap:14px;max-width:1100px"><video src="../examples/example-16x9.mp4" controls playsinline preload="metadata" style="width:100%;border-radius:12px;background:#000"></video><video src="../examples/example-9x16.mp4" controls playsinline preload="metadata" style="width:100%;border-radius:12px;background:#000"></video></div></section>
+<section id="pr" hidden><div id="prompts"></div></section></div>
+<div class="dlg" id="dlg"><div class="box"><video id="dv" controls playsinline loop></video><div class="info" id="di"></div></div></div>
+<div class="toast" id="toast">Copied</div>
+<script src="catalog.js"></script><script src="../prompts/prompts.js"></script>
+<script>
+const $=id=>document.getElementById(id),C=window.CATALOG||[];let boost='all',fmtf='all';const FL={Landscape:'16:9',Vertical:'9:16',Square:'1:1'};
+const fmt=n=>n>=1e6?(n/1e6).toFixed(1)+'M':n>=1e3?Math.round(n/1e3)+'K':n;
+const toast=()=>{const t=$('toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1100);};
+const copy=s=>navigator.clipboard.writeText(s).then(toast).catch(()=>{const a=document.createElement('textarea');a.value=s;document.body.appendChild(a);a.select();document.execCommand('copy');a.remove();toast();});
+const remix=v=>(window.PROMPTS?.remix||'').replace(/{{(\w+)}}/g,(_,k)=>({product:v.product,handle:v.handle,url:v.url,views:fmt(v.views),duration:Math.round(v.duration_s)+' s',look:v.look,magic:v.magic,category:v.category,boost:v.boost})[k]||'');
+try{const th=localStorage.getItem('th');if(th)document.documentElement.dataset.theme=th;}catch(e){}
+const setTh=()=>{$('th').textContent=document.documentElement.dataset.theme==='dark'?'Light':'Dark';};setTh();
+$('th').onclick=()=>{const d=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=d;try{localStorage.setItem('th',d)}catch(e){}setTh();};
+$('cat').innerHTML='<option value="">All categories</option>'+[...new Set(C.map(v=>v.category))].map(c=>`<option>${c}</option>`).join('');
+function grid(){const q=$('q').value.toLowerCase(),s=$('sort').value,c=$('cat').value;
+  let L=C.filter(v=>(!c||v.category===c)&&(boost==='all'||v.boost===boost)&&(fmtf==='all'||v.format===fmtf)&&(!q||(v.product+' '+v.handle+' '+v.look+' '+v.magic+' '+v.category).toLowerCase().includes(q)));
+  L.sort((a,b)=>s==='new'?b.date.localeCompare(a.date):s==='short'?a.duration_s-b.duration_s:b.views-a.views);$('count').textContent=L.length+' videos';
+  const g=$('grid');g.innerHTML='';L.forEach(v=>{const el=document.createElement('div');el.className='t';const pc=v.boost==='Boosted'?'pill b':v.boost==='Partly boosted'?'pill m':'pill';
+    el.innerHTML=`<div class="vid"><img loading="lazy" alt=""><video muted loop playsinline preload="none"></video><span class="${pc}">${v.boost}</span><span class="fmt">${FL[v.format]||""}</span><span class="scrim"></span><span class="views"><b>${fmt(v.views)}</b><span>views</span></span></div><div class="meta"><b></b><div></div></div>`;
+    el.querySelector('.vid').style.aspectRatio=v.w+'/'+v.h;el.querySelector('img').src=v.poster;const vd=el.querySelector('video');el.querySelector('.meta b').textContent=v.product;el.querySelector('.meta div').textContent='@'+v.handle+' · '+v.category;
+    el.onmouseenter=()=>{if(!vd.getAttribute('src'))vd.src=v.preview;vd.currentTime=0;vd.play().catch(()=>{});};el.onmouseleave=()=>vd.pause();el.onclick=()=>open(v);g.appendChild(el);});}
+function open(v){const dv=$('dv');dv.src=v.preview;dv.muted=false;dv.play().catch(()=>{dv.muted=true;dv.play().catch(()=>{});});
+  $('di').innerHTML=`<h2></h2><div class="h"></div><div class="kv"><span><b>${fmt(v.views)} views</b></span><span>${fmt(v.likes)} likes</span><span>${FL[v.format]||''}</span><span>${Math.round(v.duration_s)} s</span><span>${v.boost}</span><span>${v.date}</span></div><p class="lk"><b>The look</b></p><p class="mg"><b>Why it worked</b></p><div class="act"><button>Copy remix prompt</button><a target="_blank" rel="noopener">Full video on X</a></div>`;
+  const di=$('di');di.querySelector('h2').textContent=v.product;di.querySelector('.h').textContent='@'+v.handle+' · '+v.category;di.querySelector('.lk').append(v.look);di.querySelector('.mg').append(v.magic);di.querySelector('a').href=v.url;di.querySelector('button').onclick=()=>copy(remix(v));$('dlg').classList.add('on');}
+const close=()=>{$('dlg').classList.remove('on');$('dv').pause();};$('dlg').onclick=e=>{if(e.target.id==='dlg')close();};addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+document.querySelectorAll('#fmt button').forEach(b=>b.onclick=()=>{fmtf=b.dataset.f;document.querySelectorAll('#fmt button').forEach(x=>x.classList.toggle('on',x===b));grid();});
+document.querySelectorAll('#boost button').forEach(b=>b.onclick=()=>{boost=b.dataset.b;document.querySelectorAll('#boost button').forEach(x=>x.classList.toggle('on',x===b));grid();});
+$('q').oninput=grid;$('sort').onchange=grid;$('cat').onchange=grid;
+$('steps').innerHTML=(window.PROMPTS?.steps||[]).map((s,i)=>`<div class="step"><b>Step ${i+1}</b><h3>${s[0]}</h3><p>${s[1]}</p></div>`).join('');
+(window.PROMPTS?.list||[]).forEach(([t,p])=>{const h=document.createElement('div');h.className='pt';h.innerHTML='<h3></h3><button>Copy</button>';h.querySelector('h3').textContent=t;h.querySelector('button').onclick=()=>copy(p);const pr=document.createElement('pre');pr.textContent=p;$('prompts').append(h,pr);});
+document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tabs button').forEach(x=>x.classList.toggle('on',x===b));['lib','how','pr'].forEach(id=>$(id).hidden=id!==b.dataset.t);});
+grid();
+</script></body></html>
