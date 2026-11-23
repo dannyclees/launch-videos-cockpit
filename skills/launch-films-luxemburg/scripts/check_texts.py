@@ -5,7 +5,7 @@ Telefon nicht +352, deutsche Wörter/ß im Luxemburgischen, falsche Anführungs-
 import json, re, sys
 
 MAX = {"hook1": 24, "hook2": 34, "caption": 34, "p1": 30, "p2": 30, "p3": 30,
-       "offer": 34, "offer_sub": 44, "lead": 26, "cta": 22, "sub": 44}
+       "offer": 34, "d1": 14, "d2": 14, "d3": 14, "offer_sub": 44, "lead": 26, "cta": 22, "sub": 44}
 LB_DE = r"\b(und|nicht|ist|wir|Sie|Ihnen|Ihr|Ihre|kostenlos|jetzt|bei uns|für)\b"
 TTC = {"lb": r"TTC|inkl", "fr": r"TTC", "de": r"inkl\.? ?MwSt|TTC|brutto", "pt": r"IVA|TTC", "en": r"VAT|TTC"}
 

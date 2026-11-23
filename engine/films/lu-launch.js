@@ -17,11 +17,31 @@ function fit(x,s,X,Y,size,maxW,o={}){const w0=o.w||600;x.save();if('letterSpacin
 function big(x,s,X,Y,size,maxW,o={}){x.save();x.font=`${o.w||600} ${size}px ${FONT}`;const m=x.measureText(s).width,Lw=m>maxW*1.2?wrap(x,s,maxW):[s];x.restore();
   const ls=Lw.length>2?[Lw[0],Lw.slice(1).join(' ')]:Lw;let sz=size;ls.forEach((l,i)=>{sz=Math.min(sz,fit(x,l,X,Y+i*size*1.1,size,maxW,o));});return{h:ls.length*size*1.1,sz};}
 
-/* das echte Bild: shots/hero.jpg (Baustelle, Team, Ergebnis). Ohne Foto: sichtbarer Platzhalter statt Stockbild. */
+/* das echte Bild: shots/hero.jpg (Baustelle, Team, Ergebnis). Ohne Foto: Methoden-Schema, wenn die Texte d1–d3 haben
+   (z. B. Werbung -> Filter -> Termin), sonst sichtbarer Platzhalter statt Stockbild. */
 function hero(x,W,H,t){if(IMG.hero){const z=lerp(1.04,1.14,eio(seg(t,T.photo,T.end)));x.save();x.translate(W/2,H/2);x.scale(z,z);cover(x,IMG.hero,-W/2,-H/2,W,H);x.restore();}
+  else if(L('d1')!=='⟦d1⟧'){glowBg(x,W,H,t);system(x,W,H,t);return;}
   else{x.fillStyle='#1b1f27';x.fillRect(0,0,W,H);x.save();x.strokeStyle='#ffffff55';x.setLineDash([18,14]);x.lineWidth=4;rr(x,40,40,W-80,H-80,24);x.stroke();x.restore();
     txt(x,'FOTO FEHLT: engine/shots/hero.jpg',W/2,H*(VERT?.3:.5),{f:`600 ${VERT?40:46}px ${MONO}`,c:'#ffffffaa',al:'center'});}
   const g=x.createLinearGradient(0,H*.35,0,H);g.addColorStop(0,'rgba(0,0,0,0)');g.addColorStop(1,'rgba(0,0,0,.75)');x.fillStyle=g;x.fillRect(0,0,W,H);}
+
+/* Methoden-Schema: drei Kacheln (d1 d2 d3), Linien schnappen auf, Punkte fließen, nach dem Filter weniger. Beweis ohne Zahlen. */
+function system(x,W,H,t){const s=VERT?230:240,P=VERT?[[W/2,H*.22],[W/2,H*.37],[W/2,H*.52]]:[[W*.24,H*.44],[W*.5,H*.44],[W*.76,H*.44]];
+  const t0=T.photo+.15,ap=i=>t0+i*.55;
+  // Verbindungslinien schnappen auf (Akzentlinie = C&E-Signatur), dann fließen Anfragen
+  for(let i=0;i<2;i++){const [a,b]=[P[i],P[i+1]],u=eo(seg(t,ap(i)+.25,ap(i+1)+.1));if(u<=0)continue;
+    const ax=VERT?a[0]:a[0]+s/2,ay=VERT?a[1]+s/2:a[1],bx=VERT?b[0]:b[0]-s/2,by=VERT?b[1]-s/2:b[1];
+    x.save();x.strokeStyle=ACC;x.lineWidth=6;x.lineCap='round';x.beginPath();x.moveTo(ax,ay);x.lineTo(lerp(ax,bx,u),lerp(ay,by,u));x.stroke();
+    if(u>=1){const n=i===0?6:2,sp=i===0?.9:.45;for(let k=0;k<n;k++){const f=((t-ap(i+1))*sp+k/n)%1;if(f<0)continue;
+      x.fillStyle=i===0?'#ffffff':ACC;x.globalAlpha=Math.sin(f*Math.PI);x.beginPath();x.arc(lerp(ax,bx,f),lerp(ay,by,f),i===0?7:10,0,TAU);x.fill();}}x.restore();}
+  ['d1','d2','d3'].forEach((k,i)=>{const u=seg(t,ap(i),ap(i)+.35);if(u<=0)return;const [cx,cy]=P[i],z=eb(u,1.2);x.save();x.translate(cx,cy);x.scale(z,z);
+    x.fillStyle='rgba(13,20,38,.92)';x.strokeStyle=i===2?ACC:'rgba(255,255,255,.18)';x.lineWidth=i===2?3:1.5;rr(x,-s/2,-s/2,s,s,28);x.fill();x.stroke();
+    x.strokeStyle=ACC;x.fillStyle=ACC;x.lineWidth=5;x.lineJoin='round';x.lineCap='round';const r=s*.2,iy=-s*.1;
+    if(i===0){rr(x,-r*1.2,iy-r*.8,r*2.4,r*1.6,10);x.stroke();x.beginPath();x.moveTo(-r*.3,iy-r*.45);x.lineTo(r*.45,iy);x.lineTo(-r*.3,iy+r*.45);x.closePath();x.fill();}
+    if(i===1){x.beginPath();x.moveTo(-r*1.2,iy-r*.8);x.lineTo(r*1.2,iy-r*.8);x.lineTo(r*.25,iy+r*.15);x.lineTo(r*.25,iy+r*.85);x.lineTo(-r*.25,iy+r*.6);x.lineTo(-r*.25,iy+r*.15);x.closePath();x.stroke();}
+    if(i===2){rr(x,-r*1.1,iy-r*.9,r*2.2,r*1.9,10);x.stroke();x.beginPath();x.moveTo(-r*1.1,iy-r*.35);x.lineTo(r*1.1,iy-r*.35);x.stroke();
+      const c=eo(seg(t,ap(2)+.5,ap(2)+.8));if(c>0){x.beginPath();x.moveTo(-r*.45,iy+r*.25);x.lineTo(lerp(-r*.45,-r*.1,Math.min(1,c*2)),lerp(iy+r*.25,iy+r*.6,Math.min(1,c*2)));if(c>.5)x.lineTo(lerp(-r*.1,r*.55,(c-.5)*2),lerp(iy+r*.6,iy-r*.05,(c-.5)*2));x.stroke();}}
+    fit(x,L(k),0,s*.32,VERT?32:34,s-24,{w:600,c:'#fff',al:'center'});x.restore();});}
 
 function proofCard(x,X,Y,w,s,u){if(u<=0)return;const h=VERT?124:104,dx=(1-eb(clamp(u),1.4))*-80;x.save();x.globalAlpha*=clamp(u*2);x.translate(dx,0);
   x.save();x.shadowColor='rgba(0,0,0,.35)';x.shadowBlur=30;x.shadowOffsetY=10;x.fillStyle='rgba(255,255,255,.96)';rr(x,X,Y,w,h,22);x.fill();x.restore();
@@ -41,9 +61,9 @@ const film_=film({dur:16.8,events:EV,
     fit(x,L('hook1'),W/2,y,s,mw,{c:INK,al:'center',ls:-2,a});big(x,L('hook2'),W/2,y+s*1.18,s,mw,{c:ACC,al:'center',ls:-2,a:a*eo(seg(t,.45,.8))});}
   // 2 ECHTES BILD + Bildunterschrift (wer, wo) – Text nie über dem Motiv, unten im Verlauf
   if(t>=T.photo&&t<T.offer+.3){x.save();x.globalAlpha=eo(seg(t,T.photo,T.photo+.4))*(1-seg(t,T.offer,T.offer+.3));hero(x,W,H,t);
-    if(t<T.proof+.2)fit(x,L('caption'),VERT?W*.07:W*.06,VERT?H*.6:H*.86,VERT?50:54,mw,{c:'#fff',a:eo(seg(t,T.photo+.5,T.photo+.9))*(1-seg(t,T.proof-.2,T.proof+.2))});
+    if(t<T.proof+.2)fit(x,L('caption'),VERT?W*.07:W*.06,VERT?H*.635:H*.86,VERT?50:54,mw,{c:'#fff',a:eo(seg(t,T.photo+.5,T.photo+.9))*(1-seg(t,T.proof-.2,T.proof+.2))});
     // 3 DREI BELEGE: abdunkeln, Karten kommen im Takt der Klicks
-    if(t>=T.proof){x.fillStyle=`rgba(0,0,0,${.5*eo(seg(t,T.proof,T.proof+.4))})`;x.fillRect(0,0,W,H);
+    if(t>=T.proof){x.fillStyle=`rgba(0,0,0,${(IMG.hero?.5:.75)*eo(seg(t,T.proof,T.proof+.4))})`;x.fillRect(0,0,W,H);
       const X=VERT?W*.07:W*.07,w=VERT?W*.86:W*.5,Y0=VERT?H*.2:H*.24,gap=VERT?160:136;
       ['p1','p2','p3'].forEach((k,i)=>proofCard(x,X,Y0+i*gap,w,L(k),seg(t,T.proof+i*.8,T.proof+i*.8+.45)));}
     x.restore();}

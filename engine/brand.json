@@ -1,19 +1,15 @@
 {
-  "example": true,
-  "name": "Nimbus",
-  "line": "Summarize any thread in one sentence",
-  "accent": "#BFF549",
-  "bg": "#0b0d0c",
+  "name": "Clees & Ernster",
+  "lang": "lb",
+  "accent": "#4d8dff",
+  "bg": "#06080d",
   "ink": "#ffffff",
-  "glow1": "#1f6f5a",
-  "glow2": "#3b3bd6",
+  "glow1": "#0b1f45",
+  "glow2": "#1d4fb8",
   "logo": "",
-  "cta": "Try it free",
-  "sub": "Mac and Windows",
-  "lead": "Built for",
-  "items": [
-    "Claude Code",
-    "Codex"
-  ],
-  "agent": "Claude Code"
+  "cta": "Kuck mol eran",
+  "sub": "cleesernster.com",
+  "lead": "Gemaach fir",
+  "items": ["Handwierk", "Immobilien", "Premium-Servicer"],
+  "agent": ""
 }

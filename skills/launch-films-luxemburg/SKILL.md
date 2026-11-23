@@ -53,8 +53,8 @@ cp skills/launch-films-luxemburg/assets/lu-launch.texts.json engine/texts/<kunde
 ```
 
 - `engine/brand.json` aus `assets/brand-lu.example.json` schreiben (Name, Akzentfarbe, Logo-Pfad, Standardsprache).
-- Echtes Foto nach `engine/shots/hero.jpg` (Baustelle, Team, fertiges Ergebnis – kein Stockfoto). Fehlt es, zeigt der Film sichtbar „FOTO FEHLT“, das ist Absicht.
-- Website/Buchungsseite als Beweis? `node engine/shoot.mjs <url> <name> [--mobile]` und mit `browser()` + `cover()` einbauen.
+- Echtes Foto nach `engine/shots/hero.jpg` (Baustelle, Team, fertiges Ergebnis – kein Stockfoto). Kein Foto und keine freigegebenen Zahlen? Dann in den Texten `d1`–`d3` setzen (z. B. Werbung → Filter → Termin): die Vorlage zeigt die **Methode als Schema** statt eines Fotos. Ohne beides erscheint sichtbar „FOTO FEHLT“, das ist Absicht.
+- Website/Buchungsseite als Beweis? `node engine/shoot.mjs <url> <name> [--mobile]` und mit `browser()` + `cover()` einbauen. Blockiert das Netz die Seite (im Cloud-Container häufig), Screenshot vom Kunden geben lassen oder das Methoden-Schema nehmen – keine fremden Dienste mit Kundendaten füttern, ohne zu fragen.
 
 ### 5. Prüfen
 

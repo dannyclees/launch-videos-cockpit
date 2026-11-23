@@ -42,10 +42,11 @@ Voraussetzungen: Node 18+, ffmpeg, `npm i puppeteer` im Ordner `engine/`. `rende
 ## lu-launch.js (Vorlage dieses Skills)
 
 - Sprache: `?l=xx` (export `--lang xx`), sonst `brand.json` → `lang`, sonst `lb`.
-- Texte: `texts/<filmname>.json`, Schlüssel `hook1 hook2 caption p1 p2 p3 offer offer_sub lead items cta sub`. Fehlende Schlüssel erscheinen sichtbar als `⟦schlüssel⟧`.
+- Texte: `texts/<filmname>.json`, Schlüssel `hook1 hook2 caption p1 p2 p3 offer offer_sub lead items cta sub`, optional `d1 d2 d3` (Methoden-Schema statt Foto). Fehlende Schlüssel erscheinen sichtbar als `⟦schlüssel⟧`.
 - Zeitplan `T = {hook:0, photo:2.3, proof:6.2, offer:10.4, end:12.6}`, Dauer 16,8 s. Länger/kürzer: Werte in T und `dur` gemeinsam verschieben.
 - Zu lange Zeilen werden eingepasst, große Zeilen (hook2, offer) brechen ab 20 % Überlänge auf zwei Zeilen um.
-- Foto `shots/hero.jpg` mit langsamem Zoom; fehlt es, sichtbarer Platzhalter.
+- Foto `shots/hero.jpg` mit langsamem Zoom; fehlt es und gibt es `d1`–`d3`, zeigt der Film drei Kacheln mit aufschnappenden Linien und fließenden Punkten (Methode als Beweis); sonst sichtbarer Platzhalter.
+- Beispiel für einen fertigen Film aus der Vorlage: `engine/films/clees-ernster.js` mit `engine/texts/clees-ernster.json`.
 - Logo (`brand.json` → `logo`, z. B. `shots/logo.png`) erscheint über dem Markennamen auf der Endkarte.
 - Sounds passen sich der Zahl der Gemeinden an (`items`).
 - Ruhiges Premium (Muster 7): `EV` leer lassen (Push-Zeile entfernen), dann nur Musik.
