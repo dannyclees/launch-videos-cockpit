@@ -1,0 +1,15 @@
+{
+  "name": "Beispill Heizung",
+  "lang": "lb",
+  "accent": "#2F6BFF",
+  "bg": "#0b0d12",
+  "ink": "#ffffff",
+  "glow1": "#1d3f8f",
+  "glow2": "#0f6b5a",
+  "logo": "",
+  "cta": "Devis ufroen",
+  "sub": "+352 000 000 000",
+  "lead": "Mir sinn do an",
+  "items": ["Lëtzebuerg-Stad", "Esch-Uelzecht", "Ettelbréck"],
+  "agent": ""
+}

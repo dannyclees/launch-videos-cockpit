@@ -1,7 +1,7 @@
-# python3 mix.py <film> [--vertical] [--music your-licensed-track.mp3] [--offset 0]
+# python3 mix.py <film> [--vertical] [--lang xx] [--music your-licensed-track.mp3] [--offset 0]
 # Adds the click sounds from the film's events (+ optional music you have a licence for) -> out/<film>[_v]_final.mp4
 import json,subprocess,sys,os
-a=sys.argv;name=a[1];tag=name+('_v' if '--vertical' in a else '');H=os.path.dirname(os.path.abspath(__file__))
+a=sys.argv;name=a[1];lg=a[a.index('--lang')+1] if '--lang' in a else '';tag=name+('_'+lg if lg else '')+('_v' if '--vertical' in a else '');H=os.path.dirname(os.path.abspath(__file__))
 music=a[a.index('--music')+1] if '--music' in a else None;off=a[a.index('--offset')+1] if '--offset' in a else '0'
 src=f'{H}/out/{tag}.mp4';ev=json.load(open(f'{H}/out/{tag}.events.json'))
 dur=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','csv=p=0',src]))
