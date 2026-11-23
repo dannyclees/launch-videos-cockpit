@@ -1,0 +1,242 @@
+{
+  "_hinweis": "Launchfilm Clees & Ernster v2 (Skill launch-films-luxemburg, Muster 1 + 5: Problem -> System in 3 Schritten -> planbar). Keine Zahlen, keine Ergebnisse, die nicht freigegeben sind. Kundennachrichten und Anzeige sind illustrierte Beispiele. LB und FR vor Veröffentlichung gegenlesen.",
+  "langs": [
+    "lb",
+    "de",
+    "fr"
+  ],
+  "lb": {
+    "hook1": "Däi Betrib:",
+    "hook2": "Premium.",
+    "tag": "LËTZEBUERG",
+    "pain": "Deng Ufroen:",
+    "msgs": [
+      "Wat kascht dat ongeféier?",
+      "Dat ass mer ze deier.",
+      "Geet et net méi bëlleg?",
+      "Just e Präis, w.e.g."
+    ],
+    "msgfrom": "MESSAGE",
+    "msgtime": "ELO",
+    "slam": "Zoufall.",
+    "turn1": "Et geet och",
+    "turn2": "planbar.",
+    "step": "SCHRËTT",
+    "s1": "Präzis Reklamm",
+    "s1sub": "fir Deng Wonschclienten",
+    "adname": "Däi Betrib",
+    "adsp": "Gesponsert",
+    "adline": "Är nei Kichen, op Mooss.",
+    "adcta": "Méi gewuer ginn",
+    "chips": [
+      "Proprietär",
+      "Regioun Zentrum",
+      "Premium-Projet"
+    ],
+    "s2": "Filter virun der Ufro",
+    "s2sub": "nëmme sérieux Projeten",
+    "form": "UFRO",
+    "q": [
+      "Wat fir e Projet?",
+      "Budget-Rahmen?",
+      "Wéini?"
+    ],
+    "o1": [
+      "Kichen",
+      "Buedzëmmer",
+      "Living"
+    ],
+    "o2": [
+      "Basis",
+      "Premium",
+      "Luxus"
+    ],
+    "o3": [
+      "Dëst Joer",
+      "Méi spéit"
+    ],
+    "qual": "QUALIFIZÉIERT",
+    "s3": "Nofaassen, automatesch",
+    "s3sub": "kee Lead geet verluer",
+    "chatmode": "AUTOMATESCH",
+    "out": "Merci fir Är Ufro! Wéini passt Iech e Rendez-vous?",
+    "in": "Donneschdeg moies?",
+    "booked": "RENDEZ-VOUS GEBUCHT",
+    "plan": "Planbar.",
+    "days": [
+      "Mé",
+      "Dë",
+      "Më",
+      "Do",
+      "Fr"
+    ],
+    "week": "DÄI KALENNER",
+    "claim1": "Kampagnen,",
+    "claim2": "déi zünden.",
+    "claimsub": "PRÄZIS · PLANBAR · AUS LËTZEBUERG",
+    "lead": "Gemaach fir",
+    "items": [
+      "Handwierk",
+      "Immobilien",
+      "Premium-Servicer"
+    ],
+    "cta": "Kuck mol eran",
+    "sub": "cleesernster.com"
+  },
+  "de": {
+    "hook1": "Dein Betrieb:",
+    "hook2": "Premium.",
+    "tag": "LUXEMBURG",
+    "pain": "Deine Anfragen:",
+    "msgs": [
+      "Was kostet das ungefähr?",
+      "Das ist mir zu teuer.",
+      "Geht's nicht billiger?",
+      "Nur einen Preis, bitte."
+    ],
+    "msgfrom": "NACHRICHT",
+    "msgtime": "JETZT",
+    "slam": "Zufall.",
+    "turn1": "Es geht auch",
+    "turn2": "planbar.",
+    "step": "SCHRITT",
+    "s1": "Präzise Werbung",
+    "s1sub": "für Deine Wunschkunden",
+    "adname": "Dein Betrieb",
+    "adsp": "Gesponsert",
+    "adline": "Ihre neue Küche, nach Maß.",
+    "adcta": "Mehr erfahren",
+    "chips": [
+      "Eigentümer",
+      "Region Zentrum",
+      "Premium-Projekt"
+    ],
+    "s2": "Filter vor der Anfrage",
+    "s2sub": "nur ernsthafte Projekte",
+    "form": "ANFRAGE",
+    "q": [
+      "Welches Projekt?",
+      "Budget-Rahmen?",
+      "Wann?"
+    ],
+    "o1": [
+      "Küche",
+      "Bad",
+      "Wohnraum"
+    ],
+    "o2": [
+      "Basis",
+      "Premium",
+      "Luxus"
+    ],
+    "o3": [
+      "Dieses Jahr",
+      "Später"
+    ],
+    "qual": "QUALIFIZIERT",
+    "s3": "Nachfassen, automatisch",
+    "s3sub": "kein Lead geht verloren",
+    "chatmode": "AUTOMATISCH",
+    "out": "Danke für Ihre Anfrage! Wann passt Ihnen ein Termin?",
+    "in": "Donnerstag vormittags?",
+    "booked": "TERMIN GEBUCHT",
+    "plan": "Planbar.",
+    "days": [
+      "Mo",
+      "Di",
+      "Mi",
+      "Do",
+      "Fr"
+    ],
+    "week": "DEIN KALENDER",
+    "claim1": "Kampagnen,",
+    "claim2": "die zünden.",
+    "claimsub": "PRÄZISE · PLANBAR · AUS LUXEMBURG",
+    "lead": "Gemacht für",
+    "items": [
+      "Handwerk",
+      "Immobilien",
+      "Premium-Dienstleister"
+    ],
+    "cta": "Schau vorbei",
+    "sub": "cleesernster.com"
+  },
+  "fr": {
+    "hook1": "Votre métier :",
+    "hook2": "Premium.",
+    "tag": "LUXEMBOURG",
+    "pain": "Vos demandes :",
+    "msgs": [
+      "C'est combien, à peu près ?",
+      "C'est trop cher pour moi.",
+      "Vous faites moins cher ?",
+      "Juste un prix, svp."
+    ],
+    "msgfrom": "MESSAGE",
+    "msgtime": "MAINTENANT",
+    "slam": "Le hasard.",
+    "turn1": "On peut les",
+    "turn2": "planifier.",
+    "step": "ÉTAPE",
+    "s1": "Une pub précise",
+    "s1sub": "pour vos clients idéaux",
+    "adname": "Votre entreprise",
+    "adsp": "Sponsorisé",
+    "adline": "Votre cuisine, sur mesure.",
+    "adcta": "En savoir plus",
+    "chips": [
+      "Propriétaire",
+      "Région Centre",
+      "Projet premium"
+    ],
+    "s2": "Le filtre avant la demande",
+    "s2sub": "seulement des projets sérieux",
+    "form": "DEMANDE",
+    "q": [
+      "Quel projet ?",
+      "Budget ?",
+      "Quand ?"
+    ],
+    "o1": [
+      "Cuisine",
+      "Salle de bain",
+      "Séjour"
+    ],
+    "o2": [
+      "Base",
+      "Premium",
+      "Luxe"
+    ],
+    "o3": [
+      "Cette année",
+      "Plus tard"
+    ],
+    "qual": "QUALIFIÉ",
+    "s3": "Relance automatique",
+    "s3sub": "aucun contact perdu",
+    "chatmode": "AUTOMATIQUE",
+    "out": "Merci pour votre demande ! Quand êtes-vous disponible ?",
+    "in": "Jeudi matin ?",
+    "booked": "RENDEZ-VOUS RÉSERVÉ",
+    "plan": "Planifiable.",
+    "days": [
+      "Lu",
+      "Ma",
+      "Me",
+      "Je",
+      "Ve"
+    ],
+    "week": "VOTRE AGENDA",
+    "claim1": "Des campagnes",
+    "claim2": "qui font mouche.",
+    "claimsub": "PRÉCIS · PLANIFIABLE · LUXEMBOURG",
+    "lead": "Conçu pour",
+    "items": [
+      "l'artisanat",
+      "l'immobilier",
+      "les services premium"
+    ],
+    "cta": "Découvrez-nous",
+    "sub": "cleesernster.com"
+  }
+}

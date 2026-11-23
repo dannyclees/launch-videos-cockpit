@@ -62,6 +62,10 @@ await (await page.$('#c')).screenshot({path: 'hook_fr_v.png'});
 ```
 Gute Prüfzeiten für lu-launch: 0,9 (Hook) · 4 (Foto) · 8,5 (Belege) · 11,5 (Angebot) · 13,4 (Gemeinden) · 15,5 (Marke).
 
+## Referenzfilm ce-launch.js (Premium-Niveau)
+
+`engine/films/ce-launch.js` + `engine/texts/ce-launch.json` (LB/DE/FR, 24,6 s): eigene Bausteine `paper()`, `glass()`, `pill()`, `brush()`, `rise()` (Masken-Reveal), `pop()`, `tick()`, Szenen-Router über Zeitmarken `S`, Layout `LY` (Hochformat mittig im sicheren Bereich, Querformat Text links/Bild rechts). Schriften: `engine/fonts/fonts.css` (Montserrat, IBM Plex Mono, lokal – unabhängig vom Netz beim Export). Für neue Kundenfilme: Datei kopieren, Szenen austauschen, Bausteine behalten.
+
 ## Fehlerbilder
 
 | Symptom | Ursache / Lösung |

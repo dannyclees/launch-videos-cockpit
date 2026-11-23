@@ -2,7 +2,7 @@
 // needs: npm i puppeteer (once), ffmpeg on PATH. Serves this folder locally, renders every frame at 2x, encodes H.264 crf 16.
 import puppeteer from 'puppeteer';import http from 'http';import fs from 'fs';import path from 'path';import {execFileSync} from 'child_process';import {fileURLToPath} from 'url';
 const HERE=path.dirname(fileURLToPath(import.meta.url)),name=process.argv[2]||'example',V=process.argv.includes('--vertical'),LI=process.argv.indexOf('--lang'),LG=LI>0?(process.argv[LI+1]||'').replace(/[^a-z]/gi,''):'',tag=name+(LG?'_'+LG:'')+(V?'_v':'');
-const MIME={'.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.wav':'audio/wav','.mp3':'audio/mpeg'};
+const MIME={'.html':'text/html','.js':'text/javascript','.json':'application/json','.svg':'image/svg+xml','.png':'image/png','.jpg':'image/jpeg','.wav':'audio/wav','.mp3':'audio/mpeg','.css':'text/css','.woff2':'font/woff2'};
 const srv=http.createServer((q,r)=>{const f=path.join(HERE,decodeURIComponent(q.url.split('?')[0]));if(!f.startsWith(HERE)||!fs.existsSync(f)||fs.statSync(f).isDirectory()){r.writeHead(404);return r.end();}r.writeHead(200,{'Content-Type':MIME[path.extname(f)]||'application/octet-stream'});fs.createReadStream(f).pipe(r);});
 await new Promise(r=>srv.listen(0,'127.0.0.1',r));const b=await puppeteer.launch({headless:true,args:['--no-sandbox','--mute-audio'],executablePath:process.env.PUPPETEER_EXECUTABLE_PATH||undefined});
 try{const p=await b.newPage();p.on('pageerror',e=>console.error('[page]',e.message));
